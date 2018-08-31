@@ -16,6 +16,7 @@ public class Pokemon {
     private int pokeGeneration;             //what generation
     private boolean legendaryStatus;        //is this pokemon legendary?
 
+    //TODO: work on documentation!
     /**
      * This constructor uses all fields from the CSV file to create a pokemon object
      *
