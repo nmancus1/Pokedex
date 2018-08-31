@@ -32,12 +32,15 @@ public class Main {
 
             //Menu system
             switch (userInput) {
+
                 case 't':                                 //test
                     test();
                     break;
+
                 case 'g':                                 //greeting
                     printGreeting();
                     break;
+                    
                 case 'f':                                 //file input
                     //call fileInput, store return value in monsterCount
                     int monsterCount = fileInput_MonsterCounter();
