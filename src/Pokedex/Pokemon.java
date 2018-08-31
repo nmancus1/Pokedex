@@ -176,6 +176,11 @@ public class Pokemon {
     //toString to be used with CSV file
     @Override
     public String toString() {
+        return String.format("%-4s %-20s %-20s %-20s\n", this.pokeNumber, this.pokeName,
+                this.pokeType_1, this.hitPoints);
+    }
+
+    public String fullToString() {
         return "\n\n# " + pokeNumber +
                 " " + pokeName + '\'' +
                 ", Type 1= '" + pokeType_1 + '\'' +
@@ -191,12 +196,5 @@ public class Pokemon {
                 ", legendaryStatus= " + legendaryStatus;
     }
 
-    //toString method for testing
-    public String testToString() {
-        return "\n\n# " + pokeNumber +
-                " '" + pokeName + '\'' +
-                ", Type 1= '" + pokeType_1 + '\'' +
-                ", HP= " + hitPoints;
-    }
 
 }

@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Declare and itialize scanner, user input variable, monster counter
+        //Declare and initialize scanner, user input variable
         Scanner scan = new Scanner(System.in);
         char userInput;
 
@@ -31,7 +31,7 @@ public class Main {
             userInput = scan.next().charAt(0);
 
             //Menu system
-            switch (userInput) {
+            switch (Character.toLowerCase(userInput)) {
 
                 case 't':                                 //test
                     test();
@@ -40,16 +40,20 @@ public class Main {
                 case 'g':                                 //greeting
                     printGreeting();
                     break;
-                    
+
                 case 'f':                                 //file input
                     //call fileInput, store return value in monsterCount
                     int monsterCount = fileInput_MonsterCounter();
 
                     //print number of monsters sorted to console
-                    System.out.println("\n" + monsterCount + " monsters sorted!");
+                    System.out.println("\n" + monsterCount + " monsters sorted!\n" +
+                            "Output files generated: grass_monsters.csv, water_monsters.csv");
                     break;
             }
         } while (userInput != 'q');                        //quit
+
+        //Close scanner - not deprecated!
+        scan.close();
 
         System.out.println("Goodbye!");
     }
@@ -72,12 +76,13 @@ public class Main {
         pokeList.add(charMander);
 
         //Test pokemon objects, print to console
+        System.out.println("\nTesting pokemon objects.....");
+        System.out.printf("\n%-4s %-20s %-20s %-20s\n", "#", "Name", "Type", "Hit Points");
+        System.out.println("===============================================================");
 
-        System.out.println("Testing.....");
+        //Print monster name and info, using toString
         for (Pokemon monster : pokeList) {
-
-            System.out.println(monster.testToString());
-
+            System.out.print(monster);
         }
     }
 
@@ -113,7 +118,7 @@ public class Main {
                 "***********************************************************************\n");
     }
 
-    //Accepts file input and counts number of monsters sorted
+    //Handles file input and counts number of monsters sorted
     private static int fileInput_MonsterCounter() {
         //monster counting variable
         int monsterCount = 0;
@@ -121,8 +126,11 @@ public class Main {
         //Scanner to accept user input for filename
         Scanner scan = new Scanner(System.in);
 
+
         //Prompt user to input file name
-        System.out.print("Please enter the name of the file, including the extension (\".csv\", etc.): ");
+        System.out.println("\nPlease enter the name of the file, including the extension (\".csv\", etc.), or 'Q' to  quit. ");
+        System.out.print("~>");
+
         File inputFile = new File(scan.nextLine());
 
         //Attempt to read file
@@ -134,6 +142,10 @@ public class Main {
         } catch (IOException e) {
             System.out.println("\nFile not found!");        //whoops
         }
+
+        //Close scanner - not deprecated!
+        scan.close();
+
         return monsterCount;
 
 
