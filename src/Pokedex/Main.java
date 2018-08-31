@@ -43,7 +43,7 @@ public class Main {
 
                 case 'f':                                 //file input
                     //call fileInput, store return value in monsterCount
-                    int monsterCount = fileInput_MonsterCounter();
+                    int monsterCount = fileInput_monsterCounter();
 
                     //print number of monsters sorted to console
                     System.out.println("\n" + monsterCount + " monsters sorted!\n" +
@@ -119,7 +119,7 @@ public class Main {
     }
 
     //Handles file input and counts number of monsters sorted
-    private static int fileInput_MonsterCounter() {
+    private static int fileInput_monsterCounter() {
         //monster counting variable
         int monsterCount = 0;
 
