@@ -1,7 +1,9 @@
 package Pokedex;
 
-import java.io.FileInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Declare and itialize scanner and user input variable
+        //Declare and itialize scanner, user input variable, monster counter
         Scanner scan = new Scanner(System.in);
         char userInput;
 
@@ -26,23 +28,31 @@ public class Main {
             System.out.print("~>");
 
             //Accept user input
-            userInput  = scan.next().charAt(0);
+            userInput = scan.next().charAt(0);
 
             //Menu system
             switch (userInput) {
-                case 't': test();                               //test
+                case 't':                                 //test
+                    test();
                     break;
-                case 'g': printGreeting();                      //menu
+                case 'g':                                 //greeting
+                    printGreeting();
                     break;
-                case 'f': fileInput();
+                case 'f':                                 //file input
+                    //call fileInput, store return value in monsterCount
+                    int monsterCount = fileInput_MonsterCounter();
+
+                    //print number of monsters sorted to console
+                    System.out.println("\n" + monsterCount + " monsters sorted!");
                     break;
             }
-        } while (userInput != 'q');                             //quit
+        } while (userInput != 'q');                        //quit
 
         System.out.println("Goodbye!");
     }
 
-    public static void test() {
+    //Test method, creates four monsters and prints them to console
+    private static void test() {
 
         // Create pokemon objects for testing
         Pokemon bulbaSaur = new Pokemon(1, "Bulbasaur", "Grass", 45);
@@ -68,7 +78,8 @@ public class Main {
         }
     }
 
-    public static void printPokeAscii() {
+    //Prints ascii art
+    private static void printPokeAscii() {
 
         System.out.print("                                  ,'\\\n" +
                 "    _.----.        ____         ,'  _\\   ___    ___     ____\n" +
@@ -85,7 +96,8 @@ public class Main {
 
     }
 
-    public static void printGreeting() {
+    //Prints greeting
+    private static void printGreeting() {
 
         System.out.print("\n\n***********************************************************************\n" +
                 "*                    WELCOME TO POKEDEX!!!                            *\n" +
@@ -98,27 +110,58 @@ public class Main {
                 "***********************************************************************\n");
     }
 
-    public static void fileInput () {
+    //Accepts file input and counts number of monsters sorted
+    private static int fileInput_MonsterCounter() {
+        //monster counting variable
+        int monsterCount = 0;
 
-        String pokeInputFile;
+        //Scanner to accept user input for filename
         Scanner scan = new Scanner(System.in);
 
+        //Prompt user to input file name
         System.out.print("Please enter the name of the file, including the extension (\".csv\", etc.): ");
-        pokeInputFile = scan.nextLine();
+        File inputFile = new File(scan.nextLine());
+
+        //Attempt to read file
+        try (Scanner fileReader = new Scanner(inputFile)) {
+            while (fileReader.hasNextLine()) {
+                monsterSorter(fileReader.nextLine());       //call monsterSorter
+                monsterCount++;                             //increment monsterCounter
+            }
+        } catch (IOException e) {
+            System.out.println("\nFile not found!");        //whoops
+        }
+        return monsterCount;
+
+
+    }
+
+    private static void monsterSorter(String monsterInfo) {
+
+        //Split monsterInfo string in array, using commas as delimiter
+        String[] monsterInfoArray = monsterInfo.split(",");
 
         try {
-            FileInputStream inputFile = new FileInputStream(pokeInputFile);
+            //Create Printwriters for files
+            PrintWriter grassMonsterFile = new PrintWriter(new FileOutputStream("grass_monsters.csv", true));
+            PrintWriter waterMonsterFile = new PrintWriter(new FileOutputStream("water_monsters.csv", true));
+
+            //If monster is grass element
+            if (monsterInfoArray[2].equalsIgnoreCase("grass")) {
+                grassMonsterFile.println(monsterInfo);
+                grassMonsterFile.flush();
+                grassMonsterFile.close();
+
+                //If monster is water element
+            } else if (monsterInfoArray[2].equalsIgnoreCase("water")) {
+                waterMonsterFile.println(monsterInfo);
+                waterMonsterFile.flush();
+                waterMonsterFile.close();
+            }
         } catch (IOException e) {
-            System.out.println("File not found!");
+            System.out.println("Error writing to file!");       //whoops
         }
-
-
     }
-
-    public static void fileSort () {
-
-    }
-
 }
 
 
