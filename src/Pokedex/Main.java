@@ -142,13 +142,7 @@ public class Main {
         } catch (IOException e) {
             System.out.println("\nFile not found!");        //whoops
         }
-
-        //Close scanner - not deprecated!
-        scan.close();
-
         return monsterCount;
-
-
     }
 
     private static void monsterSorter(String monsterInfo) {
