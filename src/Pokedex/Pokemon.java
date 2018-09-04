@@ -2,10 +2,12 @@ package Pokedex;
 
 public class Pokemon {
 
+    static int pokemonCounter;
+
     private int pokeNumber;                 //pokemon number in list
     private String pokeName;                //pokemon name
-    private String pokeType_1;                  //first type
-    private String pokeType_2;                  //second type
+    private String pokeType_1;              //first type
+    private String pokeType_2;              //second type
     private int total;                      //total points
     private int hitPoints;                  //hit points
     private int attackPoints;               //attack points
@@ -17,6 +19,10 @@ public class Pokemon {
     private boolean legendaryStatus;        //is this pokemon legendary?
 
     //TODO: work on documentation!
+
+    public Pokemon(){
+        pokemonCounter++;
+    }
     /**
      * This constructor uses all fields from the CSV file to create a pokemon object
      *
@@ -51,6 +57,8 @@ public class Pokemon {
         this.pokeSpeed = pokeSpeed;
         this.pokeGeneration = pokeGeneration;
         this.legendaryStatus = legendaryStatus;
+
+        pokemonCounter++;
     }
 
     /**
@@ -66,6 +74,7 @@ public class Pokemon {
         this.pokeName = pokeName;
         this.pokeType_1 = pokeType_1;
         this.hitPoints = hitPoints;
+        pokemonCounter++;
 
 
     }
@@ -174,12 +183,32 @@ public class Pokemon {
         this.legendaryStatus = legendaryStatus;
     }
 
+    public static int getNumPokemon() {
+        return pokemonCounter;
+    }
+
     //toString to be used with CSV file
     @Override
     public String toString() {
         return String.format("%-4s %-20s %-20s %-20s\n", this.pokeNumber, this.pokeName,
                 this.pokeType_1, this.hitPoints);
     }
+
+
+    public String toCSVString(){
+        return pokeNumber + "," +
+                pokeName + "," +
+                pokeType_1 + "," +
+                pokeType_2 + "," +
+                total + "," +
+                hitPoints + "," +
+                attackPoints + "," +
+                defensePoints + "," +
+                specAtkPoints + "," +
+                specDefPoints + "," +
+                pokeSpeed + "," +
+                pokeGeneration + "," +
+                legendaryStatus;    }
 
     public String fullToString() {
         return "\n\n# " + pokeNumber +
