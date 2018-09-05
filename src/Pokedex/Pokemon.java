@@ -1,3 +1,10 @@
+/*
+ *Nick Mancuso
+ *
+ * This class represents a Pokemon object, built from information derived from a CSV file.
+ *
+ */
+
 package Pokedex;
 
 public class Pokemon {

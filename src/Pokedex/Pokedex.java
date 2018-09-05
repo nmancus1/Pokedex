@@ -1,3 +1,9 @@
+/*Nick Mancuso
+ *
+ *This class is a Pokemon index for organizing Pokemon objects, as well as sorting and printing their information
+ *
+ */
+
 package Pokedex;
 
 import java.io.FileOutputStream;
@@ -84,7 +90,7 @@ public class Pokedex {
 
     }
 
-    //Generates a list of entire Pokedex using Stringbuilder
+    //Generates a list of entire Pokedex using Stringbuilder, gets out of hand without pagination
     @Override
     public String toString() {
 
