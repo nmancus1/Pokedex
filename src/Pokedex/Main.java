@@ -66,7 +66,9 @@ public class Main {
 
                     //First make sure a file has been successfully read
                     if (fileReadOK) {
-                        pokedex.sortToFiles();                                  //sort objects to files based on type 1
+
+                        //Sort Pokemon based on type 1, confirm write successful
+                        pokedex.sortToFiles();
                         System.out.println("Pokedex sorted successfully! Water and grass Pokemon written to .csv " +
                                 "files in present working directory.");
                     } else {
@@ -82,7 +84,7 @@ public class Main {
 
                         System.out.println(pokedex.getPokedexElement(i));
 
-                        //Wait for user OK after every 20 elements
+                        //Wait for user OK after every 20 elements *pagination* with new header on every page
                         if (((i % 20) == 0) && (i != 0)) {
                             Scanner scanner = new Scanner(System.in);
                             System.out.println("Press return key to continue....");
@@ -196,6 +198,7 @@ public class Main {
     //Build Pokemon object from String [], load into Pokedex, catch inputmismatch, etc.
     private static void buildPokemon(String[] pokemonInfoArray, Pokedex pokedex) {
 
+        //Build new Pokemon
         try {
             Pokemon pokemon = new Pokemon(
                     Integer.parseInt(pokemonInfoArray[0]),
@@ -212,10 +215,12 @@ public class Main {
                     Integer.parseInt(pokemonInfoArray[11]),
                     Boolean.parseBoolean(pokemonInfoArray[12]));
 
+            //Add to Pokedex
             pokedex.add(pokemon);
 
+            //Catch input/parsing issues
         } catch (Exception e) {
-            System.out.println("Please check value fields in .csv file.");
+            System.out.println("Possible input mismatch! Please check value fields in .csv file.");
         }
 
     }
