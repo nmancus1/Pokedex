@@ -2,8 +2,6 @@ package Pokedex;
 
 public class Pokemon {
 
-    static int pokemonCounter;
-
     private int pokeNumber;                 //pokemon number in list
     private String pokeName;                //pokemon name
     private String pokeType_1;              //first type
@@ -21,7 +19,6 @@ public class Pokemon {
     //TODO: work on documentation!
 
     public Pokemon(){
-        pokemonCounter++;
     }
     /**
      * This constructor uses all fields from the CSV file to create a pokemon object
@@ -57,8 +54,6 @@ public class Pokemon {
         this.pokeSpeed = pokeSpeed;
         this.pokeGeneration = pokeGeneration;
         this.legendaryStatus = legendaryStatus;
-
-        pokemonCounter++;
     }
 
     /**
@@ -74,9 +69,6 @@ public class Pokemon {
         this.pokeName = pokeName;
         this.pokeType_1 = pokeType_1;
         this.hitPoints = hitPoints;
-        pokemonCounter++;
-
-
     }
 
     public int getPokeNumber() {
@@ -183,14 +175,10 @@ public class Pokemon {
         this.legendaryStatus = legendaryStatus;
     }
 
-    public static int getNumPokemon() {
-        return pokemonCounter;
-    }
-
     //toString to be used with CSV file
     @Override
     public String toString() {
-        return String.format("%-4s %-20s %-20s %-20s\n", this.pokeNumber, this.pokeName,
+        return String.format("%-4s %-35s %-20s %-20s\n", this.pokeNumber, this.pokeName,
                 this.pokeType_1, this.hitPoints);
     }
 
@@ -223,7 +211,7 @@ public class Pokemon {
                 ", \nSpecial Defense Points= " + specDefPoints +
                 ", pokeSpeed= " + pokeSpeed +
                 ", pokeGeneration= " + pokeGeneration +
-                ", legendaryStatus= " + legendaryStatus;
+                ", legendaryStatus= " + legendaryStatus + "\n";
     }
 
 
