@@ -47,22 +47,26 @@ public class Main {
                     System.out.println("\nPlease enter the name of the file, including the extension (\".csv\", etc.), or 'Q' to  quit.");
                     System.out.print("~>");
 
+                    //Create new file object from input
                     File inputFileName = new File(scan.next());
 
+                    //Attempt to parse file
                     try {
-                        fileInputHelper(inputFileName, pokedex);
-                        System.out.println(pokedex.getNumPokemon() + " Pokemon built from " + inputFileName + ".");
+                        fileInputHelper(inputFileName, pokedex);                                //handle file input
+                        System.out.println(pokedex.getNumPokemon() + " Pokemon built from " +
+                                inputFileName + ".");                                           //success
                         fileReadOK = true;
 
                     } catch (FileNotFoundException e) {
-                        System.out.println("Please enter a valid filename with .csv extension.");
+                        System.out.println("Please enter a valid filename with .csv extension.");//file not found!
                     }
                     break;
 
                 case 's':                                  //sort pokedex to files
 
+                    //First make sure a file has been successfully read
                     if (fileReadOK) {
-                        pokedex.sortToFiles();
+                        pokedex.sortToFiles();                                  //sort objects to files based on type 1
                         System.out.println("Pokedex sorted successfully! Water and grass Pokemon written to .csv " +
                                 "files in present working directory.");
                     } else {
@@ -71,20 +75,19 @@ public class Main {
                     break;
 
                 case 'p':                                   //print all Pokemon to console
-                    printInfoHeader();
-                    // System.out.println(pokedex);
+                    printInfoHeader();                      //print header
+
+                    //Print paginated list to console
                     for (int i = 0; i < pokedex.getNumPokemon(); i++) {
 
                         System.out.println(pokedex.getPokedexElement(i));
 
-
-                        if (((i % 20) == 0) && (i != 1)) {
+                        //Wait for user OK after every 20 elements
+                        if (((i % 20) == 0) && (i != 0)) {
                             Scanner scanner = new Scanner(System.in);
                             System.out.println("Press return key to continue....");
                             scanner.nextLine();
                             printInfoHeader();
-
-
                         }
                     }
             }
@@ -94,6 +97,7 @@ public class Main {
         scan.close();
 
         System.out.println("Goodbye!");
+        System.exit(0);
     }
 
     //Test method, creates four pokemons and prints them to console
@@ -105,6 +109,7 @@ public class Main {
         Pokemon venuSaur = new Pokemon(3, "Venosaur", "Grass", 80);
         Pokemon charMander = new Pokemon(4, "Charmander", "Fire", 39);
 
+        //Test add
         pokedex.add(bulbaSaur);
         pokedex.add(ivySaur);
         pokedex.add(venuSaur);
@@ -121,7 +126,7 @@ public class Main {
         System.out.println("\nYou have created " + pokedex.getNumPokemon() + " Pokemon objects!");
 
         pokedex.sortToFiles();
-        System.out.println("\nTest Pokemon objects sorted and written to .csv files in present working directory.");
+        System.out.println("\nPokemon objects sorted and written to .csv files in present working directory.");
     }
 
     //Prints ascii art
@@ -158,18 +163,21 @@ public class Main {
                 "***********************************************************************\n");
     }
 
+    //Helper method to handle file input
     private static void fileInputHelper(File inputFileName, Pokedex pokedex) throws FileNotFoundException {
 
+        //Read from input file using scanner
         try {
-
             Scanner fileReader = new Scanner(inputFileName);
             fileReader.nextLine();
             while (fileReader.hasNextLine()) {
 
+                //Build string array from parsed line
                 String[] pokemonInfoArray = generatePokemonInfoArray(fileReader);
+
+                //Pass string array to build method
                 buildPokemon(pokemonInfoArray, pokedex);
             }
-
         } catch (FileNotFoundException e) {
             System.out.println("\nFile not found!");        //whoops
             throw e;
@@ -177,31 +185,32 @@ public class Main {
 
     }
 
+    //Helper method for generating string array with Pokemon info
     private static String[] generatePokemonInfoArray(Scanner fileReader) {
 
         String pokemonInfo = fileReader.nextLine();
-        String[] pokemonInfoArray = pokemonInfo.split(",");
+        String[] pokemonInfoArray = pokemonInfo.split(",");         //split string at commas into []
         return pokemonInfoArray;
     }
 
+    //Build Pokemon object from String [], load into Pokedex, catch inputmismatch, etc.
     private static void buildPokemon(String[] pokemonInfoArray, Pokedex pokedex) {
 
-        Pokemon pokemon = new Pokemon();
-
         try {
-            pokemon.setPokeNumber(Integer.parseInt(pokemonInfoArray[0]));
-            pokemon.setPokeName(pokemonInfoArray[1]);
-            pokemon.setPokeType_1(pokemonInfoArray[2]);
-            pokemon.setPokeType_2(pokemonInfoArray[3]);
-            pokemon.setTotal(Integer.parseInt(pokemonInfoArray[4]));
-            pokemon.setHitPoints(Integer.parseInt(pokemonInfoArray[5]));
-            pokemon.setAttackPoints(Integer.parseInt(pokemonInfoArray[6]));
-            pokemon.setDefensePoints(Integer.parseInt(pokemonInfoArray[7]));
-            pokemon.setSpecAtkPoints(Integer.parseInt(pokemonInfoArray[8]));
-            pokemon.setSpecDefPoints(Integer.parseInt(pokemonInfoArray[9]));
-            pokemon.setPokeSpeed(Integer.parseInt(pokemonInfoArray[10]));
-            pokemon.setPokeGeneration(Integer.parseInt(pokemonInfoArray[11]));
-            pokemon.setLegendaryStatus(Boolean.parseBoolean(pokemonInfoArray[12]));
+            Pokemon pokemon = new Pokemon(
+                    Integer.parseInt(pokemonInfoArray[0]),
+                    pokemonInfoArray[1],
+                    pokemonInfoArray[2],
+                    pokemonInfoArray[3],
+                    Integer.parseInt(pokemonInfoArray[4]),
+                    Integer.parseInt(pokemonInfoArray[5]),
+                    Integer.parseInt(pokemonInfoArray[6]),
+                    Integer.parseInt(pokemonInfoArray[7]),
+                    Integer.parseInt(pokemonInfoArray[8]),
+                    Integer.parseInt(pokemonInfoArray[9]),
+                    Integer.parseInt(pokemonInfoArray[10]),
+                    Integer.parseInt(pokemonInfoArray[11]),
+                    Boolean.parseBoolean(pokemonInfoArray[12]));
 
             pokedex.add(pokemon);
 
@@ -211,6 +220,7 @@ public class Main {
 
     }
 
+    //Print info header and line
     private static void printInfoHeader() {
         System.out.printf("\n%-4s %-35s %-20s %-20s\n", "#", "Name", "Type", "Hit Points");
         System.out.println("==========================================================================");
