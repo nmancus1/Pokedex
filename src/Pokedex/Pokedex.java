@@ -9,46 +9,53 @@ public class Pokedex {
     private int numPokemon = 0;
     private Pokemon[] pokemonArray;
 
+    //Constructor
     public Pokedex() {
         pokemonArray = new Pokemon[0];
     }
 
-    public Pokedex(int size) {
-        pokemonArray = new Pokemon[size];
-    }
-
+    //Add Pokemon
     public void add(Pokemon pokemon) {
 
+        //Grow array size
         this.pokemonArray = growArray();
-        pokemonArray[pokemonArray.length - 1] = pokemon;
-        this.numPokemon++;
 
+        //Assign new pokemon
+        pokemonArray[pokemonArray.length - 1] = pokemon;
+
+        //Inc total Pokemon in Pokedex
+        this.numPokemon++;
     }
 
+    //Helper method to grow array size when adding a Pokemon
     public Pokemon[] growArray() {
 
+        //Grow by 1
         Pokemon[] newPokemonArray = new Pokemon[this.pokemonArray.length + 1];
 
+        //Copy array
         for (int i = 0; i < this.pokemonArray.length; i++) {
             newPokemonArray[i] = this.pokemonArray[i];
         }
+
+        //Set old array to null for garbage collection
         pokemonArray = null;
+
         return newPokemonArray;
 
     }
 
+    //Returns number of Pokemon in Pokedex
     public int getNumPokemon() {
         return numPokemon;
     }
 
-    public void setNumPokemon(int numPokemon) {
-        this.numPokemon = numPokemon;
-    }
-
+    //Allows iteration through Pokedex
     public Pokemon getPokedexElement(int i) {
         return pokemonArray[i];
     }
 
+    //Sort Pokemon by type, into two files.  If files exist, they will be appended.
     public void sortToFiles() {
 
         for (int i = 0; i < numPokemon; i++) {
@@ -77,6 +84,7 @@ public class Pokedex {
 
     }
 
+    //Generates a list of entire Pokedex using Stringbuilder
     @Override
     public String toString() {
 

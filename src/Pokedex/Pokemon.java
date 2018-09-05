@@ -16,27 +16,9 @@ public class Pokemon {
     private int pokeGeneration;             //what generation
     private boolean legendaryStatus;        //is this pokemon legendary?
 
-    //TODO: work on documentation!
-
-    public Pokemon(){
+    //Default constructor
+    public Pokemon() {
     }
-    /**
-     * This constructor uses all fields from the CSV file to create a pokemon object
-     *
-     * @param pokeNumber
-     * @param pokeName
-     * @param pokeType_1
-     * @param pokeType_2
-     * @param total
-     * @param hitPoints
-     * @param attackPoints
-     * @param defensePoints
-     * @param specAtkPoints
-     * @param specDefPoints
-     * @param pokeSpeed
-     * @param pokeGeneration
-     * @param legendaryStatus
-     */
 
     public Pokemon(int pokeNumber, String pokeName, String pokeType_1, String pokeType_2, int total,
                    int hitPoints, int attackPoints, int defensePoints, int specAtkPoints,
@@ -56,14 +38,7 @@ public class Pokemon {
         this.legendaryStatus = legendaryStatus;
     }
 
-    /**
-     * This constructor uses four basic fields, for hardcoded testing.
-     * @param pokeNumber
-     * @param pokeName
-     * @param pokeType_1
-     * @param hitPoints
-     */
-
+    //Constructor for hardcoded testing
     public Pokemon(int pokeNumber, String pokeName, String pokeType_1, int hitPoints) {
         this.pokeNumber = pokeNumber;
         this.pokeName = pokeName;
@@ -175,7 +150,7 @@ public class Pokemon {
         this.legendaryStatus = legendaryStatus;
     }
 
-    //toString to be used with CSV file
+    //toString to be used for console printing, corresponds to printHeaderInfo() formatting
     @Override
     public String toString() {
         return String.format("%-4s %-35s %-20s %-20s\n", this.pokeNumber, this.pokeName,
@@ -183,7 +158,8 @@ public class Pokemon {
     }
 
 
-    public String toCSVString(){
+    //toString for CSV file output
+    public String toCSVString() {
         return pokeNumber + "," +
                 pokeName + "," +
                 pokeType_1 + "," +
@@ -196,8 +172,10 @@ public class Pokemon {
                 specDefPoints + "," +
                 pokeSpeed + "," +
                 pokeGeneration + "," +
-                legendaryStatus;    }
+                legendaryStatus;
+    }
 
+    //Prints all info
     public String fullToString() {
         return "\n\n# " + pokeNumber +
                 " " + pokeName + '\'' +
