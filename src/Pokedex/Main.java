@@ -1,3 +1,9 @@
+/*Nick Mancuso
+ *
+ * This program test the Pokemon  and Pokedex classes, and provides a menu system to
+ * input, sort, and print the Pokemon created from a CSV file to the console.
+ *
+ */
 package Pokedex;
 
 import java.io.File;
