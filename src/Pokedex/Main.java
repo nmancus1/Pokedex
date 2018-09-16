@@ -59,7 +59,7 @@ public class Main {
                     //Attempt to parse file
                     try {
                         fileInputHelper(inputFileName, pokedex);                                //handle file input
-                        System.out.println(pokedex.getNumPokemon() + " Pokemon built from " +
+                        System.out.println(pokedex.getCurrentSize() + " Pokemon built from " +
                                 inputFileName + ".");                                           //success
                         fileReadOK = true;
 
@@ -68,15 +68,19 @@ public class Main {
                     }
                     break;
 
-                case 's':                                  //sort pokedex to files
+                case 's':                                  //sort pokedex to sorted Pokedex
 
                     //First make sure a file has been successfully read
                     if (fileReadOK) {
+                        //Prompt for user input
+                        System.out.println("What type of Pokemon would you like to sort?");
+                        String type = scan.next();
+                        type = type.toLowerCase();
 
                         //Sort Pokemon based on type 1, confirm write successful
-                        pokedex.sortToFiles();
-                        System.out.println("Pokedex sorted successfully! Water and grass Pokemon written to .csv " +
-                                "files in present working directory.");
+                        Pokedex sortedPokedex = pokedex.getSortedPokedex(type, pokedex);
+                        sortedPokedex.printToCSVFile();
+
                     } else {
                         System.out.println("Please input a valid file to scan, using the (F)ile command.");
                     }
@@ -86,11 +90,11 @@ public class Main {
                     printInfoHeader();                      //print header
 
                     //Print paginated list to console
-                    for (int i = 0; i < pokedex.getNumPokemon(); i++) {
+                    for (int i = 0; i < pokedex.getCurrentSize(); i++) {
 
-                        System.out.println(pokedex.getPokedexElement(i));
+                        System.out.println(pokedex.pokemonAt(i));
 
-                        //Wait for user OK after every 20 elements *pagination* with new header on every page
+                        //Wait for user OK after every 20 lines *pagination* with new header on every page
                         if (((i % 20) == 0) && (i != 0)) {
                             Scanner scanner = new Scanner(System.in);
                             System.out.println("Press return key to continue....");
@@ -131,9 +135,9 @@ public class Main {
         System.out.print(pokedex);
 
         //Print number of sorted Pokemon to console
-        System.out.println("\nYou have created " + pokedex.getNumPokemon() + " Pokemon objects!");
+        System.out.println("\nYou have created " + pokedex.getCurrentSize() + " Pokemon objects!");
 
-        pokedex.sortToFiles();
+        Pokedex sortedPokedex = pokedex.getSortedPokedex("all", pokedex);
         System.out.println("\nPokemon objects sorted and written to .csv files in present working directory.");
     }
 

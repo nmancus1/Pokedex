@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beb39e74-426e-4508-8fb5-2cd57bf9ecaf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pokedex/PokedexInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pokedex/PokedexTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pokedex/Pokedex_old.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pokedex/Pokedex/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pokedex/Pokedex/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pokedex/Pokedex/Pokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pokedex/Pokedex/Pokemon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pokedex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pokedex/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pokedex/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pokedex/Pokedex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pokedex/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pokedex/Pokemon.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,100 +23,59 @@
     <session id="-95235951">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="28" />
-          <entry key="java" value="7" />
+          <entry key="csv" value="33" />
+          <entry key="java" value="12" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="7" />
+          <entry key="CSV" value="5" />
+          <entry key="JAVA" value="12" />
           <entry key="PLAIN_TEXT" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="15746" />
-          <entry key="txt" value="532" />
+          <entry key="dummy" value="17" />
+          <entry key="java" value="21935" />
+          <entry key="txt" value="571" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15746" />
-          <entry key="PLAIN_TEXT" value="532" />
+          <entry key="JAVA" value="21935" />
+          <entry key="PLAIN_TEXT" value="588" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Pokedex/Pokemon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2195">
-              <caret line="3" column="90" selection-start-line="3" selection-start-column="90" selection-end-line="3" selection-end-column="90" />
+            <state relative-caret-position="138">
+              <caret line="162" selection-start-line="162" selection-end-line="162" />
               <folding>
-                <element signature="e#2748#2749#0" expanded="true" />
-                <element signature="e#2781#2782#0" expanded="true" />
-                <element signature="e#2830#2831#0" expanded="true" />
-                <element signature="e#2874#2875#0" expanded="true" />
-                <element signature="e#2909#2910#0" expanded="true" />
-                <element signature="e#2940#2941#0" expanded="true" />
-                <element signature="e#2988#2989#0" expanded="true" />
-                <element signature="e#3028#3029#0" expanded="true" />
-                <element signature="e#3065#3066#0" expanded="true" />
-                <element signature="e#3098#3099#0" expanded="true" />
-                <element signature="e#3150#3151#0" expanded="true" />
-                <element signature="e#3194#3195#0" expanded="true" />
-                <element signature="e#3231#3232#0" expanded="true" />
-                <element signature="e#3264#3265#0" expanded="true" />
-                <element signature="e#3316#3317#0" expanded="true" />
-                <element signature="e#3360#3361#0" expanded="true" />
-                <element signature="e#3389#3390#0" expanded="true" />
-                <element signature="e#3417#3418#0" expanded="true" />
-                <element signature="e#3456#3457#0" expanded="true" />
-                <element signature="e#3490#3491#0" expanded="true" />
-                <element signature="e#3523#3524#0" expanded="true" />
-                <element signature="e#3555#3556#0" expanded="true" />
-                <element signature="e#3602#3603#0" expanded="true" />
-                <element signature="e#3644#3645#0" expanded="true" />
-                <element signature="e#3680#3681#0" expanded="true" />
-                <element signature="e#3715#3716#0" expanded="true" />
-                <element signature="e#3768#3769#0" expanded="true" />
-                <element signature="e#3816#3817#0" expanded="true" />
-                <element signature="e#3853#3854#0" expanded="true" />
-                <element signature="e#3889#3890#0" expanded="true" />
-                <element signature="e#3944#3945#0" expanded="true" />
-                <element signature="e#3994#3995#0" expanded="true" />
-                <element signature="e#4031#4032#0" expanded="true" />
-                <element signature="e#4067#4068#0" expanded="true" />
-                <element signature="e#4122#4123#0" expanded="true" />
-                <element signature="e#4172#4173#0" expanded="true" />
-                <element signature="e#4209#4210#0" expanded="true" />
-                <element signature="e#4245#4246#0" expanded="true" />
-                <element signature="e#4300#4301#0" expanded="true" />
-                <element signature="e#4350#4351#0" expanded="true" />
-                <element signature="e#4383#4384#0" expanded="true" />
-                <element signature="e#4415#4416#0" expanded="true" />
-                <element signature="e#4462#4463#0" expanded="true" />
-                <element signature="e#4504#4505#0" expanded="true" />
-                <element signature="e#4542#4543#0" expanded="true" />
-                <element signature="e#4579#4580#0" expanded="true" />
-                <element signature="e#4636#4637#0" expanded="true" />
-                <element signature="e#4688#4689#0" expanded="true" />
-                <element signature="e#4730#4731#0" expanded="true" />
-                <element signature="e#4768#4769#0" expanded="true" />
-                <element signature="e#4831#4832#0" expanded="true" />
-                <element signature="e#4885#4886#0" expanded="true" />
-                <element signature="e#4970#5195#0" />
+                <element signature="e#2318#2319#0" expanded="true" />
+                <element signature="e#2349#2350#0" expanded="true" />
+                <element signature="e#2474#2475#0" expanded="true" />
+                <element signature="e#2507#2508#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,14 +84,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Pokedex/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1080">
-              <caret line="3" column="77" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
+            <state>
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
+                <element signature="e#0#10282#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="method#printPokeAscii#0;class#Main#0" />
                 <element signature="method#printGreeting#0;class#Main#0" />
-                <element signature="method#fileInputHelper#0;class#Main#0" />
-                <element signature="method#generatePokemonInfoArray#0;class#Main#0" />
                 <element signature="method#printInfoHeader#0;class#Main#0" />
               </folding>
             </state>
@@ -137,32 +98,65 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_monsters.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pokemon.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12000">
+            <state relative-caret-position="696">
               <caret line="800" column="56" selection-start-line="800" selection-start-column="56" selection-end-line="800" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Pokedex/PokedexInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Pokedex/Pokedex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="92" column="97" selection-start-line="92" selection-start-column="97" selection-end-line="92" selection-end-column="97" />
+            <state relative-caret-position="2535">
+              <caret line="191" column="65" selection-start-line="191" selection-start-column="65" selection-end-line="191" selection-end-column="65" />
               <folding>
-                <element signature="e#0#2819#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="method#sortToFiles#0;class#Pokedex#0" />
-                <element signature="method#toString#0;class#Pokedex#0" />
+                <element signature="e#1169#1170#0" expanded="true" />
+                <element signature="e#1195#1196#0" expanded="true" />
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+                <element signature="method#removeAll#0;class#Pokedexx#0" />
+                <element signature="method#getNumberOf#0;class#Pokedexx#0" />
+                <element signature="e#5631#5632#0" expanded="true" />
+                <element signature="e#5673#5674#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/water_pokemons.csv">
+        <entry file="file://$PROJECT_DIR$/all_monsters.csv">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grass_monsters.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Pokedex/PokedexTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -201,16 +195,20 @@
         <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/src/Pokedex/MonsterCounter.java" />
         <option value="$PROJECT_DIR$/src/Pokedex/PokemonSorter.java" />
-        <option value="$PROJECT_DIR$/src/Pokedex/Main.java" />
         <option value="$PROJECT_DIR$/src/Pokedex/Pokemon.java" />
+        <option value="$PROJECT_DIR$/src/Pokedex/PokedexInterface.java" />
+        <option value="$PROJECT_DIR$/src/Pokedex/SortedPokedex.java" />
+        <option value="$PROJECT_DIR$/src/Pokedex/PokedexTest.java" />
+        <option value="$PROJECT_DIR$/src/Pokedex/Pokedexx.java" />
+        <option value="$PROJECT_DIR$/src/Pokedex/Main.java" />
         <option value="$PROJECT_DIR$/src/Pokedex/Pokedex.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1440" />
-    <option name="width" value="720" />
-    <option name="height" value="437" />
+    <option name="x" value="-1" />
+    <option name="width" value="1442" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -246,7 +244,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536118814904" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537058725677" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -261,19 +259,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Pokedex.Main" />
-      <module name="Pokedex" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Pokedex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Pokedex" />
@@ -284,13 +269,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pokedex.Main" />
+      <module name="Pokedex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Pokedex.Pokedex_old" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokedexTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pokedex.PokedexTest" />
+      <module name="Pokedex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Pokedex.Pokedex_old" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.PokedexTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.PokedexTest" />
       </list>
     </recent_temporary>
   </component>
@@ -389,14 +402,35 @@
       <option name="project" value="LOCAL" />
       <updated>1536118036154</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Finalized comments">
+      <created>1536118812465</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1536118812465</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Reworked some setters">
+      <created>1536118839183</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1536118839183</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Reworked some setters">
+      <created>1536118864455</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1536118864455</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1439" y="0" width="1442" height="880" extended-state="6" />
+    <frame x="-1" y="0" width="1442" height="880" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16427547" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12266858" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -405,7 +439,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32845744" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2819149" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.08909574" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38031915" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -423,6 +457,34 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17144907" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32845744" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.109042555" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38031915" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32978722" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
@@ -440,14 +502,27 @@
     <MESSAGE value="Changed some method sigs for clarity, added optimized constructors." />
     <MESSAGE value="Cleaned up and refactored menu, added pagination to Pokemon object printing, added printInfo Header method" />
     <MESSAGE value="Cleaned up xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up xml" />
+    <MESSAGE value="Finalized comments" />
+    <MESSAGE value="Reworked some setters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked some setters" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Pokedex/Pokedex.java</url>
+          <line>219</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Pokedex/test.txt" />
     <entry file="file://$PROJECT_DIR$/src/Pokedex/CSVParser.java" />
-    <entry file="file://$PROJECT_DIR$/grass_monsters.csv" />
     <entry file="file://$PROJECT_DIR$/water_monsters.csv" />
     <entry file="file://$PROJECT_DIR$/test.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -460,13 +535,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pokedex/MonsterCounter.java" />
-    <entry file="file://$PROJECT_DIR$/src/Pokedex/PokemonSorter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pokedex/PokemonSorter.java" />
     <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -482,23 +551,97 @@
     <entry file="file://$PROJECT_DIR$/water_pokemons.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pokedex/SortedPokedex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding>
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#121#122#0" expanded="true" />
+            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+            <element signature="e#1738#1739#0" expanded="true" />
+            <element signature="e#1777#1778#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pokedex/Pokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+          <folding>
+            <element signature="e#2318#2319#0" expanded="true" />
+            <element signature="e#2349#2350#0" expanded="true" />
+            <element signature="e#2474#2475#0" expanded="true" />
+            <element signature="e#2507#2508#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pokedex/Pokedex_old.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#growArray#0;class#Pokedex#0" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1416#1417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pokedex/PokedexTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pokemon.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12000">
+        <state relative-caret-position="696">
           <caret line="800" column="56" selection-start-line="800" selection-start-column="56" selection-end-line="800" selection-end-column="56" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pokedex/PokedexInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/all_monsters.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_monsters.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grass_monsters.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pokedex/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080">
-          <caret line="3" column="77" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
+        <state>
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
+            <element signature="e#0#10282#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="method#printPokeAscii#0;class#Main#0" />
             <element signature="method#printGreeting#0;class#Main#0" />
-            <element signature="method#fileInputHelper#0;class#Main#0" />
-            <element signature="method#generatePokemonInfoArray#0;class#Main#0" />
             <element signature="method#printInfoHeader#0;class#Main#0" />
           </folding>
         </state>
@@ -506,75 +649,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pokedex/Pokedex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="92" column="97" selection-start-line="92" selection-start-column="97" selection-end-line="92" selection-end-column="97" />
+        <state relative-caret-position="2535">
+          <caret line="191" column="65" selection-start-line="191" selection-start-column="65" selection-end-line="191" selection-end-column="65" />
           <folding>
-            <element signature="e#0#2819#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#sortToFiles#0;class#Pokedex#0" />
-            <element signature="method#toString#0;class#Pokedex#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pokedex/Pokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2195">
-          <caret line="3" column="90" selection-start-line="3" selection-start-column="90" selection-end-line="3" selection-end-column="90" />
-          <folding>
-            <element signature="e#2748#2749#0" expanded="true" />
-            <element signature="e#2781#2782#0" expanded="true" />
-            <element signature="e#2830#2831#0" expanded="true" />
-            <element signature="e#2874#2875#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
-            <element signature="e#2940#2941#0" expanded="true" />
-            <element signature="e#2988#2989#0" expanded="true" />
-            <element signature="e#3028#3029#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="e#3098#3099#0" expanded="true" />
-            <element signature="e#3150#3151#0" expanded="true" />
-            <element signature="e#3194#3195#0" expanded="true" />
-            <element signature="e#3231#3232#0" expanded="true" />
-            <element signature="e#3264#3265#0" expanded="true" />
-            <element signature="e#3316#3317#0" expanded="true" />
-            <element signature="e#3360#3361#0" expanded="true" />
-            <element signature="e#3389#3390#0" expanded="true" />
-            <element signature="e#3417#3418#0" expanded="true" />
-            <element signature="e#3456#3457#0" expanded="true" />
-            <element signature="e#3490#3491#0" expanded="true" />
-            <element signature="e#3523#3524#0" expanded="true" />
-            <element signature="e#3555#3556#0" expanded="true" />
-            <element signature="e#3602#3603#0" expanded="true" />
-            <element signature="e#3644#3645#0" expanded="true" />
-            <element signature="e#3680#3681#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
-            <element signature="e#3768#3769#0" expanded="true" />
-            <element signature="e#3816#3817#0" expanded="true" />
-            <element signature="e#3853#3854#0" expanded="true" />
-            <element signature="e#3889#3890#0" expanded="true" />
-            <element signature="e#3944#3945#0" expanded="true" />
-            <element signature="e#3994#3995#0" expanded="true" />
-            <element signature="e#4031#4032#0" expanded="true" />
-            <element signature="e#4067#4068#0" expanded="true" />
-            <element signature="e#4122#4123#0" expanded="true" />
-            <element signature="e#4172#4173#0" expanded="true" />
-            <element signature="e#4209#4210#0" expanded="true" />
-            <element signature="e#4245#4246#0" expanded="true" />
-            <element signature="e#4300#4301#0" expanded="true" />
-            <element signature="e#4350#4351#0" expanded="true" />
-            <element signature="e#4383#4384#0" expanded="true" />
-            <element signature="e#4415#4416#0" expanded="true" />
-            <element signature="e#4462#4463#0" expanded="true" />
-            <element signature="e#4504#4505#0" expanded="true" />
-            <element signature="e#4542#4543#0" expanded="true" />
-            <element signature="e#4579#4580#0" expanded="true" />
-            <element signature="e#4636#4637#0" expanded="true" />
-            <element signature="e#4688#4689#0" expanded="true" />
-            <element signature="e#4730#4731#0" expanded="true" />
-            <element signature="e#4768#4769#0" expanded="true" />
-            <element signature="e#4831#4832#0" expanded="true" />
-            <element signature="e#4885#4886#0" expanded="true" />
-            <element signature="e#4970#5195#0" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="method#removeAll#0;class#Pokedexx#0" />
+            <element signature="method#getNumberOf#0;class#Pokedexx#0" />
+            <element signature="e#5631#5632#0" expanded="true" />
+            <element signature="e#5673#5674#0" expanded="true" />
           </folding>
         </state>
       </provider>
