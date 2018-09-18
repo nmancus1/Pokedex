@@ -18,6 +18,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         char userInput;
         boolean fileReadOK = false;
+        File inputFileName;
 
         //Create pokedex
         Pokedex pokedex = new Pokedex();
@@ -54,7 +55,7 @@ public class Main {
                     System.out.print("~>");
 
                     //Create new file object from input
-                    File inputFileName = new File(scan.next());
+                    inputFileName = new File(scan.next());
 
                     //Attempt to parse file
                     try {
@@ -79,6 +80,9 @@ public class Main {
 
                         //Sort Pokemon based on type 1, confirm write successful
                         Pokedex sortedPokedex = pokedex.getSortedPokedex(type, pokedex);
+                        if (sortedPokedex.getCurrentSize() == 0) {
+                            System.out.println("No pokemon of " + type + " type exist in file.\n");
+                        }
                         sortedPokedex.printToCSVFile();
 
                     } else {

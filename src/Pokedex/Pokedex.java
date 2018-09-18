@@ -226,7 +226,7 @@ public class Pokedex {
 
             //Write each sorted monster to file
             for (int i = 0; i < index; i++) {
-                pw.println(this.pokemonAt(i));
+                pw.println(this.pokemonAt(i).toCSVString());
 
             }
             //Close printwriter and send success message to console
